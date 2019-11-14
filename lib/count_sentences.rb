@@ -1,22 +1,30 @@
 require 'pry'
-
 class String
-
   def sentence?
-  def showing_self
-    puts self
-    "Hi, my name is Sophie.".end_with?(".")
+    if self.end_with?(".")
+      return true
+    else
+      return false
+    end
   end
-
-  def question?
-
+ def question?
+    if self.end_with?("?")
+      return true
+    else
+      return false
+    end
   end
 
   def exclamation?
-
+if self.end_with?("!")
+  return true
+else 
+  return false
+end
   end
 
-  def count_sentences
-
-  end
+    def count_sentences
+      new_array = self.split(/[.?!]/).reject {|string| string.empty?}
+      return new_array.length
+    end
 end
