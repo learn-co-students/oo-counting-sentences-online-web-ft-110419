@@ -17,7 +17,6 @@ class String
 
   def count_sentences
     #binding.pry
-    self.split.join
     if sentence? || question? || exclamation?
       self.split(/[.?!]/).reject{|w| w.empty?}.count
     else
